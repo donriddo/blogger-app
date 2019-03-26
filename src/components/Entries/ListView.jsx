@@ -45,8 +45,10 @@ class ListView extends React.Component {
                 return (
                     <tr key={key}>
                         <td>{data.id}</td>
-                        <td>{data.name}</td>
-                        <td>{String(data.email)}</td>
+                        <td>{data.headline}</td>
+                        <td>{data.bodyText}</td>
+                        <td>{data.pubDate}</td>
+                        <td>{data.modDate}</td>
                         <td><button onClick={() => this.props.dispatch(entryActions.getOne(data.id))} type="button" className="btn btn-default">View</button></td>
                         <td><button type="button" className="btn btn-warning" data-toggle="modal" data-target="#editStory">Edit</button></td>
                     </tr>
@@ -66,8 +68,10 @@ class ListView extends React.Component {
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Name</th>
-                            <th>Email</th>
+                            <th>Headline</th>
+                            <th>Body Text</th>
+                            <th>Publish Date</th>
+                            <th>Last Modified</th>
                             <th></th>
                             <th></th>
                         </tr>
