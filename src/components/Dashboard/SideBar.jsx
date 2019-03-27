@@ -18,7 +18,7 @@ class SideBar extends React.Component {
 
     selectModel(model) {
         this.props.dispatch(rootActions.selectModel(model));
-        this.props.dispatch(actions[model.name].getAll(model.link));
+        if (actions[model.name]) this.props.dispatch(actions[model.name].getAll(model.link));
     }
 
     render() {
