@@ -1,9 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import { deserializeModel } from '../../_helpers';
-import { commentActions } from '../../_actions';
 
 class DetailView extends React.Component {
 

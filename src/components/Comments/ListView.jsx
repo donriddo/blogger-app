@@ -1,9 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import { deserializeModel } from '../../_helpers';
-import { rootActions, commentActions } from '../../_actions';
+import { commentActions } from '../../_actions';
 
 class ListView extends React.Component {
 
