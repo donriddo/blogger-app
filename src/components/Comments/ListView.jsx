@@ -85,6 +85,12 @@ class ListView extends React.Component {
                             </a>
                         </li>
                         <li onClick={this.getPreviousPage.bind(this)} className={commentList.links && commentList.links.prev ? "" : "disabled"}><a>Previous</a></li>
+                        {
+                            commentList.meta
+                            && commentList.meta.pagination
+                            && commentList.meta.pagination.page
+                            && <li><a>{commentList.meta.pagination.page}</a></li>
+                        }
                         <li onClick={this.getNextPage.bind(this)} className={commentList.links && commentList.links.next ? "" : "disabled"}><a>Next</a></li>
                         <li onClick={this.getLastPage.bind(this)} className={commentList.links && commentList.links.last ? "" : "disabled"}>
                             <a aria-label="Last">
