@@ -1,6 +1,5 @@
 import config from 'config';
 import { authHeader } from '../_helpers';
-import { logout } from './entry.service';
 import { history } from '../_helpers';
 
 export const entryService = {
@@ -65,8 +64,8 @@ function handleResponse(response) {
         const data = text && JSON.parse(text);
         if (response.status === 401) {
             // auto logout if 401 response returned from api
-            logout();
-            history.push('/login');
+            // logout();
+            // history.push('/login');
         }
 
         if (!response.ok) {
