@@ -9,12 +9,11 @@ class DetailView extends React.Component {
         let { authorDetail } = this.props.author;
         let record;
         if (authorDetail && authorDetail.data) record = deserializeModel(authorDetail.data);
-        console.log({ record })
+
         return (
             <div>
                 <h1>{record.name}</h1>
-                <small>{record.email}</small>
-                <h4>DATA</h4>
+                <small>{record.email}</small><br/><hr/>
                 {
                     Object.keys(record)
                         .filter(r => !['name', 'email'].includes(r) && !!record[r])

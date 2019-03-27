@@ -12,12 +12,13 @@ class DetailView extends React.Component {
         console.log({ record })
         return (
             <div>
-                <h1>{record.name}</h1>
-                <small>{record.email}</small>
-                <h4>DATA</h4>
+                <h1>{record.headline}</h1>
+                <small>PUBLISHED: {record.pubDate}</small><br/>
+                <small>LAST MODIFIED: {record.modDate}</small>
+                <h3>{record.bodyText}</h3><hr/>
                 {
                     Object.keys(record)
-                        .filter(r => !['name', 'email'].includes(r) && !!record[r])
+                        .filter(r => !['headline', 'bodyText', 'pubDate', 'modDate'].includes(r) && !!record[r])
                         .map((attr, key) => (
                             <h5 key={key}>{attr} - {record[attr]}</h5>
                         ))

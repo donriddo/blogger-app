@@ -13,8 +13,7 @@ class DetailView extends React.Component {
         return (
             <div>
                 <h1>{record.name}</h1>
-                <small>{record.email}</small>
-                <h4>DATA</h4>
+                <small>{record.email}</small><br/><hr/>
                 {
                     Object.keys(record)
                         .filter(r => !['name', 'email'].includes(r) && !!record[r])
